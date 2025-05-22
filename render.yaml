@@ -1,9 +1,7 @@
 services:
   - type: web
-    name: flask-stock-app
+    name: stock-flask-app
     env: python
-    buildCommand: ""
-    startCommand: python app.py
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.13.3
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
