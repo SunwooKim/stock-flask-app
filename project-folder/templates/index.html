@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>주가 조회기</title>
+</head>
+<body>
+    <h1>코스피 주가 조회</h1>
+    <form method="POST">
+        <label>종목명을 입력하세요:</label>
+        <input type="text" name="stock_name" required>
+        <input type="submit" value="조회">
+    </form>
+
+    {% if result %}
+        <h3>{{ result }}</h3>
+    {% endif %}
+</body>
+</html>
